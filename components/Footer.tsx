@@ -38,11 +38,16 @@ export default function Footer() {
 
         <div>
           <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-white">Contato</h4>
-          <ul className="space-y-2 text-sm">
-            {SITE.enderecos.map((e) => (<li key={e}>📍 {e}</li>))}
-            <li><a href={`tel:+55${SITE.whatsapp.slice(2)}`} className="hover:text-white">{SITE.telefone}</a></li>
-            <li><a href={whatsappHref()} target="_blank" rel="noopener" className="hover:text-white">WhatsApp</a></li>
-            <li><a href={`mailto:${SITE.email}`} className="hover:text-white">{SITE.email}</a></li>
+          <ul className="space-y-3 text-sm">
+            {SITE.unidades.map((u) => (
+              <li key={u.cidade}>
+                <span className="block font-semibold text-white">📍 {u.cidade}</span>
+                <span className="block text-slate-400">{u.endereco}</span>
+                <a href={`tel:+55${SITE.whatsapp.slice(2)}`} className="hover:text-white">📞 {u.telefone}</a>
+              </li>
+            ))}
+            <li><a href={whatsappHref()} target="_blank" rel="noopener" className="hover:text-white">💬 WhatsApp</a></li>
+            <li><a href={`mailto:${SITE.email}`} className="hover:text-white">✉️ {SITE.email}</a></li>
           </ul>
         </div>
       </div>

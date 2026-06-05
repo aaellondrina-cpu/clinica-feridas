@@ -20,6 +20,11 @@ export const SITE = {
     "Av. Rio Branco, 61 — Adamantina/SP",
     "Rua FEB, 194 — Osvaldo Cruz/SP",
   ],
+  // Duas unidades — mesmo telefone/WhatsApp
+  unidades: [
+    { cidade: "Adamantina/SP", endereco: "Av. Rio Branco, 61", telefone: "(18) 99758-5015" },
+    { cidade: "Osvaldo Cruz/SP", endereco: "Rua FEB, 194", telefone: "(18) 99758-5015" },
+  ],
   cidade: "Adamantina",
   estado: "SP",
   responsavel: "Liliana Cristina — Enfermeira · COREN-SP 74372",
@@ -134,7 +139,7 @@ export const SERVICOS: Servico[] = [
     tipo: "condicao",
   },
   {
-    slug: "descensos-cirurgicos",
+    slug: "deiscencias-cirurgicas",
     titulo: "Deiscências Cirúrgicas",
     subtitulo: "Cuidado de feridas e deiscências cirúrgicas",
     descricao:

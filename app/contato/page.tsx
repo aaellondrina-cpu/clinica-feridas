@@ -39,10 +39,16 @@ export default function ContatoPage() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-light text-2xl" aria-hidden>✉️</span>
                 <span><strong className="block text-neutro-escuro">E-mail</strong><span className="text-slate-600">{SITE.email}</span></span>
               </a>
-              <div className="card flex items-center gap-4 p-5">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutro-claro text-2xl" aria-hidden>📍</span>
-                <span><strong className="block text-neutro-escuro">Endereços</strong>{SITE.enderecos.map((e) => (<span key={e} className="block text-slate-600">{e}</span>))}</span>
-              </div>
+              {SITE.unidades.map((u) => (
+                <div key={u.cidade} className="card flex items-start gap-4 p-5">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-neutro-claro text-2xl" aria-hidden>📍</span>
+                  <span>
+                    <strong className="block text-neutro-escuro">Unidade {u.cidade}</strong>
+                    <span className="block text-slate-600">{u.endereco}</span>
+                    <a href={`tel:+55${SITE.whatsapp.slice(2)}`} className="text-sm font-semibold text-primary">📞 {u.telefone}</a>
+                  </span>
+                </div>
+              ))}
             </div>
           </Reveal>
           <Reveal delay={0.1}>
