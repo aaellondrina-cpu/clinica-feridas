@@ -41,7 +41,7 @@ export function whatsappHref(mensagem?: string): string {
 // quebra (não depende de serviço externo). Troque por fotos reais quando tiver.
 export function img(w: number, h: number, label: string, hex = "A0826D"): string {
   const fontSize = Math.max(16, Math.round(Math.min(w, h) / 9));
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#${hex}"/><stop offset="1" stop-color="#7CB342"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Georgia, serif" font-size="${fontSize}" font-weight="700" fill="#ffffff" fill-opacity="0.9" text-anchor="middle" dominant-baseline="central">${label}</text></svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#${hex}"/><stop offset="1" stop-color="#8A6F5C"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Georgia, serif" font-size="${fontSize}" font-weight="700" fill="#ffffff" fill-opacity="0.9" text-anchor="middle" dominant-baseline="central">${label}</text></svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
@@ -109,7 +109,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "As úlceras venosas resultam da insuficiência venosa crônica e costumam aparecer na região dos tornozelos. Nosso protocolo combina terapia compressiva, curativos avançados e cuidado da pele perilesional para acelerar a cicatrização e reduzir o risco de recorrência.",
     icone: "🩹",
-    cor: "7CB342",
+    cor: "A0826D",
     imagemLabel: "Úlcera Venosa",
     metodologia: [
       "Avaliação da insuficiência venosa e do leito da ferida",
@@ -166,7 +166,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "A prevenção é o cuidado mais eficaz e econômico. Avaliamos fatores de risco — diabetes, problemas circulatórios, mobilidade reduzida — e construímos um plano para proteger a pele, evitar lesões por pressão e identificar precocemente qualquer alteração.",
     icone: "🛡️",
-    cor: "7CB342",
+    cor: "A0826D",
     imagemLabel: "Tratamento Preventivo",
     metodologia: [
       "Avaliação de risco individual e da integridade da pele",
