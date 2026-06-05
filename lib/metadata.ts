@@ -160,6 +160,25 @@ export const SERVICOS: Servico[] = [
     tipo: "condicao",
   },
   {
+    slug: "lesao-por-pressao",
+    titulo: "Lesão por Pressão",
+    subtitulo: "Prevenção e tratamento de úlceras por pressão",
+    descricao:
+      "As lesões por pressão (também chamadas de escaras ou úlceras de decúbito) surgem em pessoas com mobilidade reduzida, acamadas ou em cadeira de rodas, pela pressão prolongada sobre a pele. Avaliamos o estágio da lesão e montamos um plano de prevenção e cicatrização, com reposicionamento, superfícies de apoio e curativos adequados.",
+    icone: "🛏️",
+    cor: "A0826D",
+    imagemLabel: "Lesão por Pressão",
+    metodologia: [
+      "Avaliação e classificação da lesão por estágio (1 a 4 / não classificável)",
+      "Alívio da pressão: reposicionamento e superfícies de apoio",
+      "Desbridamento e curativos avançados conforme o estágio",
+      "Cuidado da pele, controle de umidade e prevenção de novas lesões",
+      "Orientação ao cuidador e avaliação nutricional",
+    ],
+    legislacao: NORMAS_PADRAO,
+    tipo: "condicao",
+  },
+  {
     slug: "preventivo",
     titulo: "Tratamento Preventivo",
     subtitulo: "Prevenir antes que a ferida apareça",
