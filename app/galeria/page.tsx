@@ -96,11 +96,11 @@ export default function GaleriaPage() {
       {/* CTA */}
       <section className="section bg-neutro-claro">
         <div className="container-base">
-          <div className="rounded-3xl bg-gradient-to-br from-secondary to-secondary-dark px-6 py-12 text-center text-white sm:px-12">
+          <div className="rounded-3xl bg-gradient-to-br from-primary to-primary-dark px-6 py-12 text-center text-white sm:px-12">
             <h2 className="text-2xl font-bold sm:text-3xl">Quer um resultado assim para a sua ferida?</h2>
             <p className="mx-auto mt-3 max-w-xl text-white/90">Agende uma avaliação e comece o seu tratamento com acompanhamento especializado.</p>
             <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-              <a href={whatsappHref("Olá! Vi a galeria de resultados e gostaria de agendar uma avaliação.")} target="_blank" rel="noopener" className="btn bg-white text-secondary-dark hover:bg-neutro-claro">💬 Agendar pelo WhatsApp</a>
+              <a href={whatsappHref("Olá! Vi a galeria de resultados e gostaria de agendar uma avaliação.")} target="_blank" rel="noopener" className="btn bg-white text-primary hover:bg-neutro-claro">💬 Agendar pelo WhatsApp</a>
               <Link href="/contato/" className="btn border-2 border-white text-white hover:bg-white/10">Ver formas de contato</Link>
             </div>
           </div>

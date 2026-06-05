@@ -28,7 +28,7 @@ export default function ContatoPage() {
             <div className="flex flex-col gap-5">
               <h2 className="h-section">Fale com a gente</h2>
               <a href={whatsappHref()} target="_blank" rel="noopener" className="card flex items-center gap-4 p-5 hover:border-secondary">
-                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-light text-2xl" aria-hidden>💬</span>
+                <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-light text-2xl" aria-hidden>💬</span>
                 <span><strong className="block text-neutro-escuro">WhatsApp</strong><span className="text-slate-600">Atendimento rápido</span></span>
               </a>
               <a href={`tel:+55${SITE.whatsapp.slice(2)}`} className="card flex items-center gap-4 p-5 hover:border-primary">

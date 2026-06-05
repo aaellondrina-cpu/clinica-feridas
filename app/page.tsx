@@ -68,11 +68,11 @@ export default function HomePage() {
       {/* CTA FINAL */}
       <section className="section">
         <div className="container-base">
-          <div className="rounded-3xl bg-gradient-to-br from-secondary to-secondary-dark px-6 py-14 text-center text-white sm:px-12">
+          <div className="rounded-3xl bg-gradient-to-br from-primary to-primary-dark px-6 py-14 text-center text-white sm:px-12">
             <h2 className="text-3xl font-extrabold sm:text-4xl">Sua ferida merece cuidado especializado</h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/90">Fale com a nossa equipe e agende uma avaliação. Estamos aqui para ajudar na sua recuperação.</p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <a href={whatsappHref()} target="_blank" rel="noopener" className="btn bg-white text-secondary-dark hover:bg-neutro-claro">💬 Falar no WhatsApp</a>
+              <a href={whatsappHref()} target="_blank" rel="noopener" className="btn bg-white text-primary hover:bg-neutro-claro">💬 Falar no WhatsApp</a>
               <Link href="/contato/" className="btn border-2 border-white text-white hover:bg-white/10">Agendar avaliação</Link>
             </div>
           </div>

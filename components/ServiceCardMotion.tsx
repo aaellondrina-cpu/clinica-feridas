@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import type { Servico } from "@/lib/metadata";
 
 export default function ServiceCardMotion({ servico, index }: { servico: Servico; index: number }) {
-  const azul = index % 2 === 0;
   return (
     <div className="animate-fade-up h-full" style={{ animationDelay: `${Math.min(index * 0.08, 0.5)}s` }}>
       <motion.div
@@ -20,9 +19,7 @@ export default function ServiceCardMotion({ servico, index }: { servico: Servico
       >
         <Link
           href={`/${servico.slug}/`}
-          className={`glass group flex h-full flex-col gap-3 rounded-2xl p-6 transition-shadow hover:shadow-xl border-primary/20 ${
-            azul ? "bg-primary-light" : "bg-white"
-          }`}
+          className="glass group flex h-full flex-col gap-3 rounded-2xl border border-primary/20 bg-primary-light p-6 transition-shadow hover:shadow-xl"
           data-testid={`card-home-${servico.slug}`}
         >
           <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-white text-2xl shadow-sm" aria-hidden>
