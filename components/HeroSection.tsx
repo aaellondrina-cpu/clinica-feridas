@@ -5,11 +5,10 @@ import Logo from "./Logo";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[#0a73a8] to-secondary">
-      {/* profundidade / parallax leve (decorativo, CSS) */}
-      <div className="pointer-events-none absolute -top-28 -right-24 h-96 w-96 rounded-full bg-white/10 blur-2xl" aria-hidden />
-      <div className="pointer-events-none absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-ouro/10 blur-2xl" aria-hidden />
-      <div className="pointer-events-none absolute -bottom-20 -left-10 h-72 w-72 rounded-full bg-secondary/30 blur-2xl" aria-hidden />
+    <section className="relative overflow-hidden bg-gradient-to-br from-marrom via-marrom-dark to-secondary">
+      {/* profundidade sutil — clean, sem poluição */}
+      <div className="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-ouro/10 blur-3xl" aria-hidden />
+      <div className="pointer-events-none absolute -bottom-24 -left-12 h-72 w-72 rounded-full bg-white/5 blur-3xl" aria-hidden />
 
       <div className="container-base relative z-10 grid items-center gap-10 py-20 sm:py-28 lg:grid-cols-2">
         <Reveal>

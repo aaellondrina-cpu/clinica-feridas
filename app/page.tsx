@@ -9,6 +9,25 @@ export default function HomePage() {
     <>
       <HeroSection />
 
+      {/* BANDA DE CONFIANÇA — após o hero */}
+      <section className="border-y border-marrom/10 bg-[#FFF8DC]">
+        <div className="container-base grid grid-cols-1 gap-6 py-8 sm:grid-cols-3">
+          {[
+            { icone: "🤝", t: "Atendimento humanizado", d: "Cuidado próximo e individualizado" },
+            { icone: "🏥", t: "Duas unidades", d: "Adamantina e Osvaldo Cruz/SP" },
+            { icone: "✅", t: "Segurança do paciente", d: "Conforme as normas de saúde" },
+          ].map((b) => (
+            <div key={b.t} className="flex items-center justify-center gap-3 sm:justify-start">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-2xl shadow-sm" aria-hidden>{b.icone}</span>
+              <span>
+                <span className="block font-display text-base font-bold text-neutro-escuro">{b.t}</span>
+                <span className="block text-sm text-slate-600">{b.d}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* SERVIÇOS — os 6 cards (glass, visíveis por padrão, hover Framer, fundo alternado) */}
       <section className="section bg-gradient-to-b from-primary-light/40 via-white to-secondary-light/40" id="servicos">
         <div className="container-base">
