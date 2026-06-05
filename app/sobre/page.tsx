@@ -36,7 +36,7 @@ export default function SobrePage() {
               <span className="text-sm font-bold uppercase tracking-wide text-primary">Nossa missão</span>
               <h2 className="h-section mt-2">Devolver qualidade de vida com cuidado especializado</h2>
               <p className="mt-4 text-lg leading-relaxed text-slate-600">
-                Tratamos feridas que exigem atenção contínua — pés diabéticos, úlceras venosas e arteriais e feridas cirúrgicas —
+                Tratamos feridas que exigem atenção contínua — pés diabéticos, úlceras venosas e arteriais, feridas cirúrgicas e lesões por pressão —
                 unindo técnica, tecnologia em curativos e, acima de tudo, um cuidado que enxerga a pessoa por inteiro.
               </p>
               <Link href="/contato/" className="btn-primary mt-6">Agendar avaliação</Link>

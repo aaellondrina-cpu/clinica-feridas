@@ -21,7 +21,7 @@ export default function HeroSection() {
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
               CICATRIX — Clínica de Tratamento de Feridas. Pés diabéticos, úlceras venosas e arteriais,
-              deiscências cirúrgicas. Avaliação cuidadosa e acompanhamento até a cicatrização.
+              deiscências cirúrgicas e lesões por pressão. Avaliação cuidadosa e acompanhamento até a cicatrização.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary" data-testid="hero-whatsapp">💬 Falar no WhatsApp</a>
