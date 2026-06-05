@@ -1,10 +1,9 @@
-"use client";
-
-// ÚNICO ponto que usa Framer Motion (fade-in ao scroll). Para remover o framer,
-// basta trocar este componente por um <div> com CSS — nada mais depende dele.
-import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
+// Entrada com fade-up via CSS (keyframe 'fade-up' no tailwind.config, fill-mode both).
+// É seguro: SEMPRE termina visível — não depende de IntersectionObserver/JS, então o
+// conteúdo nunca fica preso em opacity:0 (bug que escondia os cards abaixo do hero).
+// O hover/interação com Framer Motion fica isolado nos componentes de card.
 export default function Reveal({
   children,
   delay = 0,
@@ -15,14 +14,8 @@ export default function Reveal({
   className?: string;
 }) {
   return (
-    <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
-    >
+    <div className={`animate-fade-up ${className || ""}`} style={delay ? { animationDelay: `${delay}s` } : undefined}>
       {children}
-    </motion.div>
+    </div>
   );
 }
