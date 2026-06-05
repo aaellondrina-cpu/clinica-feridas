@@ -17,7 +17,7 @@ export default function HeroSection() {
               <span aria-hidden>🤍</span> Cuidado humanizado e baseado em evidências
             </span>
             <h1 className="mt-5 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Especialista em <span className="text-secondary">feridas crônicas</span>
+              Especialista em <span className="text-primary-light">feridas crônicas</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
               CICATRIX — Clínica de Tratamento de Feridas. Pés diabéticos, úlceras venosas e arteriais,
@@ -39,7 +39,7 @@ export default function HeroSection() {
                 <Logo size={80} />
               </div>
               <p className="mt-5 font-display text-3xl font-bold text-white">CICATRIX</p>
-              <p className="mt-1 text-sm uppercase tracking-[0.2em] text-secondary">Tratamento de Feridas</p>
+              <p className="mt-1 text-sm uppercase tracking-[0.2em] text-white/70">Tratamento de Feridas</p>
               <p className="mt-4 text-sm text-white/80">{SITE.responsavel}</p>
             </div>
           </div>

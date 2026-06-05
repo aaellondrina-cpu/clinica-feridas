@@ -20,8 +20,8 @@ export default function ServiceCardMotion({ servico, index }: { servico: Servico
       >
         <Link
           href={`/${servico.slug}/`}
-          className={`glass group flex h-full flex-col gap-3 rounded-2xl p-6 transition-shadow hover:shadow-xl ${
-            azul ? "border-primary/20 bg-primary/10" : "border-secondary/20 bg-secondary/10"
+          className={`glass group flex h-full flex-col gap-3 rounded-2xl p-6 transition-shadow hover:shadow-xl border-primary/20 ${
+            azul ? "bg-primary-light" : "bg-white"
           }`}
           data-testid={`card-home-${servico.slug}`}
         >
@@ -30,7 +30,7 @@ export default function ServiceCardMotion({ servico, index }: { servico: Servico
           </span>
           <h3 className="font-display text-xl font-bold text-neutro-escuro">{servico.titulo}</h3>
           <p className="text-base leading-relaxed text-slate-600">{servico.subtitulo}</p>
-          <span className={`mt-auto inline-flex items-center gap-1 font-semibold ${azul ? "text-primary" : "text-secondary-dark"} group-hover:gap-2 transition-all`}>
+          <span className="mt-auto inline-flex items-center gap-1 font-semibold text-primary group-hover:gap-2 transition-all">
             Saiba mais <span aria-hidden>→</span>
           </span>
         </Link>

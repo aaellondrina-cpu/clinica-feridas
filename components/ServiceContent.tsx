@@ -47,7 +47,7 @@ export default function ServiceContent({ servico }: { servico: Servico }) {
       <section className="section bg-neutro-claro">
         <div className="container-base max-w-4xl">
           <Reveal>
-            <span className="text-sm font-bold uppercase tracking-wide text-secondary">Como cuidamos</span>
+            <span className="text-sm font-bold uppercase tracking-wide text-primary">Como cuidamos</span>
             <h2 className="h-section mt-2">Metodologia</h2>
           </Reveal>
           <ol className="mt-8 space-y-4">
@@ -68,14 +68,14 @@ export default function ServiceContent({ servico }: { servico: Servico }) {
         <section className="section">
           <div className="container-base max-w-4xl">
             <Reveal>
-              <span className="text-sm font-bold uppercase tracking-wide text-secondary">Por que escolher</span>
+              <span className="text-sm font-bold uppercase tracking-wide text-primary">Por que escolher</span>
               <h2 className="h-section mt-2">Benefícios</h2>
             </Reveal>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {servico.beneficios.map((b, i) => (
                 <Reveal key={i} delay={i * 0.05}>
                   <div className="card flex items-start gap-3 p-5">
-                    <span className="text-secondary text-xl" aria-hidden>✓</span>
+                    <span className="text-primary text-xl" aria-hidden>✓</span>
                     <span className="text-base leading-relaxed text-slate-700">{b}</span>
                   </div>
                 </Reveal>

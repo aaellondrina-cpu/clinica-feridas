@@ -29,7 +29,7 @@ export default function HomePage() {
       </section>
 
       {/* SERVIÇOS — os 6 cards (glass, visíveis por padrão, hover Framer, fundo alternado) */}
-      <section className="section bg-gradient-to-b from-primary-light/40 via-white to-secondary-light/40" id="servicos">
+      <section className="section bg-gradient-to-b from-primary-light/50 via-white to-primary-light/40" id="servicos">
         <div className="container-base">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
