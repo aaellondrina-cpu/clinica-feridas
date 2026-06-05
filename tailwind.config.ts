@@ -5,11 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Paleta CICATRIX — 3 cores: marrom premium + verde suave + neutros
-        primary: { DEFAULT: "#A0826D", dark: "#8A6F5C", light: "#EFE9E4" }, // marrom claro premium
-        secondary: { DEFAULT: "#7CB342", dark: "#689F38", light: "#EEF6E5" }, // verde suave
-        marrom: { DEFAULT: "#6F5B42", dark: "#5A4A36" }, // marrom escuro (faixas/accents)
-        neutro: { claro: "#F5F5F5", escuro: "#333333" },
+        // Paleta CICATRIX Premium (marrons)
+        // primary = Chocolate (textos/títulos/seções) | dark = Expresso | light = bege
+        primary: { DEFAULT: "#52301D", dark: "#2D190E", light: "#EFE3D6" },
+        // secondary = Gengibre (CTAs / botões / WhatsApp)
+        secondary: { DEFAULT: "#B85C24", dark: "#9A4A1C", light: "#F6E6D9" },
+        // marrom = tom médio (hero / faixa de credencial)
+        marrom: { DEFAULT: "#8A6242", dark: "#5A3A28" },
+        // caramelo = detalhes / ícones / suturas da logo
+        caramelo: { DEFAULT: "#C59B6A", light: "#EADBC8" },
+        neutro: { claro: "#F5F5F5", escuro: "#2D190E" },
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],

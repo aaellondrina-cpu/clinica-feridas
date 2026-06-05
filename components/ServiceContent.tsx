@@ -9,7 +9,7 @@ export default function ServiceContent({ servico }: { servico: Servico }) {
   return (
     <article>
       {/* HERO DA PÁGINA */}
-      <section className="relative overflow-hidden" style={{ background: `linear-gradient(135deg, #${servico.cor} 0%, #${servico.cor}cc 50%, #5A4A36 100%)` }}>
+      <section className="relative overflow-hidden" style={{ background: `linear-gradient(135deg, #${servico.cor} 0%, #${servico.cor}cc 50%, #2D190E 100%)` }}>
         <div className="container-base grid items-center gap-8 py-16 sm:py-20 lg:grid-cols-2">
           <Reveal>
             <div>

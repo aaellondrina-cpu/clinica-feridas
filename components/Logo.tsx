@@ -10,9 +10,9 @@ export default function Logo({
   variant?: "color" | "white";
   className?: string;
 }) {
-  const ring = variant === "white" ? "#FFFFFF" : "#A0826D";
-  const scar = variant === "white" ? "#FFFFFF" : "#8A6F5C";
-  const tick = "#7CB342";
+  const ring = variant === "white" ? "#FFFFFF" : "#6B4430";
+  const scar = variant === "white" ? "#FFFFFF" : "#2D190E";
+  const tick = "#C59B6A";
   return (
     <svg
       width={size}

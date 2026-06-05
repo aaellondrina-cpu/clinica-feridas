@@ -14,19 +14,19 @@ const estagios = [
     fase: "Antes",
     titulo: "Avaliação inicial",
     desc: "Registro da ferida no momento da primeira avaliação, com classificação do tipo de lesão e definição do plano de cuidado.",
-    cor: "A0826D",
+    cor: "C59B6A",
   },
   {
     fase: "Depois",
     titulo: "Em tratamento",
     desc: "Evolução ao longo do acompanhamento, com curativos avançados, controle de exsudato e preparo do leito da ferida.",
-    cor: "8A6F5C",
+    cor: "8A6242",
   },
   {
     fase: "Final",
     titulo: "Cicatrizado",
     desc: "Resultado ao final do protocolo: ferida cicatrizada, com orientação de prevenção para evitar recidivas.",
-    cor: "7CB342",
+    cor: "B85C24",
   },
 ];
 
@@ -100,7 +100,7 @@ export default function GaleriaPage() {
             <h2 className="text-2xl font-bold sm:text-3xl">Quer um resultado assim para a sua ferida?</h2>
             <p className="mx-auto mt-3 max-w-xl text-white/90">Agende uma avaliação e comece o seu tratamento com acompanhamento especializado.</p>
             <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
-              <a href={whatsappHref("Olá! Vi a galeria de resultados e gostaria de agendar uma avaliação.")} target="_blank" rel="noopener" className="btn bg-white text-primary hover:bg-neutro-claro">💬 Agendar pelo WhatsApp</a>
+              <a href={whatsappHref("Olá! Vi a galeria de resultados e gostaria de agendar uma avaliação.")} target="_blank" rel="noopener" className="btn-secondary">💬 Agendar pelo WhatsApp</a>
               <Link href="/contato/" className="btn border-2 border-white text-white hover:bg-white/10">Ver formas de contato</Link>
             </div>
           </div>

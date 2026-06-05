@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[#8A6F5C] to-marrom">
+    <section className="relative overflow-hidden bg-gradient-to-br from-marrom via-primary to-primary-dark">
       {/* profundidade sutil — clean, sem poluição */}
       <div className="pointer-events-none absolute -top-24 -right-24 h-80 w-80 rounded-full bg-white/10 blur-3xl" aria-hidden />
       <div className="pointer-events-none absolute -bottom-24 -left-12 h-72 w-72 rounded-full bg-white/5 blur-3xl" aria-hidden />
