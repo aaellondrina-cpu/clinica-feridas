@@ -6,6 +6,7 @@ import { SITE, SERVICOS, whatsappHref } from "@/lib/metadata";
 
 const LINKS = [
   { href: "/", label: "Início" },
+  { href: "/galeria/", label: "Galeria" },
   { href: "/sobre/", label: "Sobre" },
   { href: "/contato/", label: "Contato" },
 ];
@@ -41,6 +42,7 @@ export default function Header() {
               </div>
             )}
           </div>
+          <Link href="/galeria/" className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro">Galeria</Link>
           <Link href="/sobre/" className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro">Sobre</Link>
           <Link href="/contato/" className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro">Contato</Link>
           <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary ml-2 !min-h-[44px] !px-5 !text-sm">💬 WhatsApp</a>

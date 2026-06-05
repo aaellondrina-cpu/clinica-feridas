@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url.replace(/\/$/, "");
   const rotas = [
     { path: "/", priority: 1 },
+    { path: "/galeria/", priority: 0.7 },
     { path: "/sobre/", priority: 0.7 },
     { path: "/contato/", priority: 0.8 },
     { path: "/privacidade/", priority: 0.3 },
