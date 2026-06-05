@@ -11,17 +11,19 @@ html {
 }
 
 body {
-  color: #333333;
+  color: #2a2a2a;
   background: #ffffff;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* sem scroll horizontal no mobile */
 }
 
 @layer components {
   /* Botão base touch-friendly (48px+) */
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-200 min-h-[48px] px-6 text-base;
+    will-change: transform;
   }
   .btn-primary {
     @apply btn bg-primary text-white hover:bg-primary-dark shadow-md hover:shadow-lg;
@@ -36,20 +38,40 @@ body {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
   }
   .section {
-    @apply py-16 sm:py-20;
+    @apply py-16 sm:py-24;
   }
+  /* Títulos premium — Georgia */
   .h-title {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-neutro-escuro;
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutro-escuro;
   }
   .h-section {
-    @apply text-2xl sm:text-3xl font-bold tracking-tight text-neutro-escuro;
+    @apply font-display text-3xl sm:text-4xl font-bold tracking-tight text-neutro-escuro;
   }
   .card {
     @apply rounded-2xl bg-white border border-slate-100 shadow-sm transition-all duration-200;
   }
+  /* Glassmorphism */
+  .glass {
+    @apply backdrop-blur-md border shadow-sm;
+  }
+  /* Link com underline animada */
+  .link-underline {
+    @apply relative;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute left-0 -bottom-0.5 h-0.5 w-0 bg-current transition-all duration-300;
+  }
+  .link-underline:hover::after {
+    @apply w-full;
+  }
 }
 
-/* Evita scroll horizontal no mobile */
-body {
-  overflow-x: hidden;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }

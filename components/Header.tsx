@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { SITE, SERVICOS, whatsappHref } from "@/lib/metadata";
+import Logo from "./Logo";
 
 const LINKS = [
   { href: "/", label: "Início" },
@@ -16,22 +17,21 @@ export default function Header() {
   const [servOpen, setServOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
       <div className="container-base flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" data-testid="logo">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white font-extrabold">L</span>
-          <span className="text-lg font-extrabold tracking-tight text-neutro-escuro">
-            {SITE.nomeCurto}<span className="text-secondary">.</span>
+        <Link href="/" className="flex items-center gap-2.5" data-testid="logo" aria-label="CICATRIX — início">
+          <Logo size={40} />
+          <span className="leading-none">
+            <span className="block font-display text-xl font-bold tracking-tight text-neutro-escuro">CICATRIX</span>
+            <span className="block text-[10px] font-medium uppercase tracking-wider text-marrom">{SITE.subtitulo}</span>
           </span>
         </Link>
 
         {/* NAV DESKTOP */}
         <nav className="hidden items-center gap-1 lg:flex">
-          <Link href="/" className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro">Início</Link>
+          <Link href="/" className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700">Início</Link>
           <div className="relative" onMouseEnter={() => setServOpen(true)} onMouseLeave={() => setServOpen(false)}>
-            <button className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro" data-testid="nav-servicos">
-              Serviços ▾
-            </button>
+            <button className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700" data-testid="nav-servicos">Serviços ▾</button>
             {servOpen && (
               <div className="absolute left-0 top-full w-64 rounded-xl border border-slate-100 bg-white p-2 shadow-lg">
                 {SERVICOS.map((s) => (
@@ -42,9 +42,9 @@ export default function Header() {
               </div>
             )}
           </div>
-          <Link href="/galeria/" className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro">Galeria</Link>
-          <Link href="/sobre/" className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro">Sobre</Link>
-          <Link href="/contato/" className="rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-neutro-claro">Contato</Link>
+          <Link href="/galeria/" className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700">Galeria</Link>
+          <Link href="/sobre/" className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700">Sobre</Link>
+          <Link href="/contato/" className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700">Contato</Link>
           <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary ml-2 !min-h-[44px] !px-5 !text-sm">💬 WhatsApp</a>
         </nav>
 
@@ -64,9 +64,7 @@ export default function Header() {
         <nav className="border-t border-slate-100 bg-white lg:hidden">
           <div className="container-base flex flex-col py-2">
             {LINKS.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)} className="flex min-h-[48px] items-center px-2 text-base font-medium text-slate-700">
-                {l.label}
-              </Link>
+              <Link key={l.href} href={l.href} onClick={() => setMenuOpen(false)} className="flex min-h-[48px] items-center px-2 text-base font-medium text-slate-700">{l.label}</Link>
             ))}
             <p className="px-2 pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">Serviços</p>
             {SERVICOS.map((s) => (

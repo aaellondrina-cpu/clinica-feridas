@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 
 // ============================================================
-// Configuração do site — TROQUE os dados de contato pelos reais
+// CICATRIX — Clínica de Tratamento de Feridas
+// Configuração do site (troque os dados de contato se mudar)
 // ============================================================
 export const SITE = {
-  nome: "Liliana Cristina",
-  nomeCurto: "Liliana Cristina",
-  slogan: "Tratamento especializado de feridas crônicas",
+  nome: "CICATRIX",
+  nomeCurto: "CICATRIX",
+  subtitulo: "Clínica de Tratamento de Feridas",
+  slogan: "Especialista em Feridas Crônicas",
   descricao:
-    "Atendimento especializado no tratamento de feridas crônicas em Adamantina e Osvaldo Cruz/SP — pés diabéticos, úlceras venosas e arteriais, deiscências cirúrgicas. Cuidado humanizado, baseado em evidências e em conformidade com as normas de segurança do paciente. Enfª Liliana Cristina Tino — COREN-SP 74372.",
+    "CICATRIX — Clínica de Tratamento de Feridas em Adamantina e Osvaldo Cruz/SP. Especialista em feridas crônicas: pés diabéticos, úlceras venosas e arteriais, deiscências cirúrgicas. Cuidado humanizado e baseado em evidências. Responsável: Liliana Cristina — COREN-SP 74372.",
   url: "https://clinica-feridas.vercel.app",
   whatsapp: "5518997585015",
   telefone: "(18) 99758-5015",
@@ -20,21 +22,24 @@ export const SITE = {
   ],
   cidade: "Adamantina",
   estado: "SP",
-  responsavel: "Enfª Liliana Cristina Tino — COREN-SP 74372",
+  responsavel: "Liliana Cristina — Enfermeira · COREN-SP 74372",
 };
 
 export function whatsappHref(mensagem?: string): string {
-  const texto = mensagem || "Olá! Gostaria de informações sobre o tratamento de feridas.";
+  const texto = mensagem || "Olá! Gostaria de informações sobre o tratamento de feridas na CICATRIX.";
   return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(texto)}`;
 }
 
-// Imagem placeholder on-brand (nunca quebra). Substitua por fotos reais depois.
-export function img(w: number, h: number, label: string, hex = "0066CC"): string {
-  return `https://via.placeholder.com/${w}x${h}/${hex}/FFFFFF?text=${encodeURIComponent(label)}`;
+// Imagem placeholder on-brand via SVG inline (data URI) — renderiza offline, NUNCA
+// quebra (não depende de serviço externo). Troque por fotos reais quando tiver.
+export function img(w: number, h: number, label: string, hex = "0052CC"): string {
+  const fontSize = Math.max(16, Math.round(Math.min(w, h) / 9));
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#${hex}"/><stop offset="1" stop-color="#00A86B"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Georgia, serif" font-size="${fontSize}" font-weight="700" fill="#ffffff" fill-opacity="0.9" text-anchor="middle" dominant-baseline="central">${label}</text></svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
 // ============================================================
-// Legislação / normas (footer + Sobre)
+// Legislação / normas
 // ============================================================
 export interface NormaItem {
   sigla: string;
@@ -63,7 +68,7 @@ export interface Servico {
   cor: string; // hex sem #
   imagemLabel: string;
   metodologia: string[];
-  legislacao: string[]; // siglas do LEGISLACAO
+  legislacao: string[];
   beneficios?: string[];
   tipo: "condicao" | "tratamento";
 }
@@ -78,7 +83,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "O pé diabético é uma das complicações mais frequentes da diabetes e exige acompanhamento especializado para prevenir infecções, úlceras e amputações. Avaliamos a sensibilidade, a circulação e a integridade da pele, com plano de cuidado individualizado e educação do paciente.",
     icone: "🦶",
-    cor: "0066CC",
+    cor: "0052CC",
     imagemLabel: "Pés Diabéticos",
     metodologia: [
       "Avaliação clínica e classificação de risco (escala de Wagner / Texas)",
@@ -97,7 +102,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "As úlceras venosas resultam da insuficiência venosa crônica e costumam aparecer na região dos tornozelos. Nosso protocolo combina terapia compressiva, curativos avançados e cuidado da pele perilesional para acelerar a cicatrização e reduzir o risco de recorrência.",
     icone: "🩹",
-    cor: "00AA66",
+    cor: "00A86B",
     imagemLabel: "Úlcera Venosa",
     metodologia: [
       "Avaliação da insuficiência venosa e do leito da ferida",
@@ -116,7 +121,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "As úlceras arteriais decorrem da redução do fluxo sanguíneo (isquemia) e exigem manejo cuidadoso, muitas vezes em conjunto com a equipe vascular. O foco é proteger o tecido, controlar a dor e a infecção e favorecer a perfusão, evitando agravamento da lesão.",
     icone: "❤️‍🩹",
-    cor: "FF6B6B",
+    cor: "8B7355",
     imagemLabel: "Úlcera Arterial",
     metodologia: [
       "Avaliação da perfusão (índice tornozelo-braço) e da dor",
@@ -130,12 +135,12 @@ export const SERVICOS: Servico[] = [
   },
   {
     slug: "descensos-cirurgicos",
-    titulo: "Descensos Cirúrgicos",
+    titulo: "Deiscências Cirúrgicas",
     subtitulo: "Cuidado de feridas e deiscências cirúrgicas",
     descricao:
       "Feridas cirúrgicas que apresentam deiscência (abertura) ou cicatrização retardada precisam de acompanhamento especializado para prevenir infecção e favorecer o fechamento. Atuamos no manejo da ferida operatória complexa, com técnicas e curativos adequados a cada fase.",
     icone: "🩺",
-    cor: "0066CC",
+    cor: "0052CC",
     imagemLabel: "Feridas Cirúrgicas",
     metodologia: [
       "Avaliação da ferida operatória e dos sinais de deiscência",
@@ -154,7 +159,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "A prevenção é o cuidado mais eficaz e econômico. Avaliamos fatores de risco — diabetes, problemas circulatórios, mobilidade reduzida — e construímos um plano para proteger a pele, evitar lesões por pressão e identificar precocemente qualquer alteração.",
     icone: "🛡️",
-    cor: "00AA66",
+    cor: "00A86B",
     imagemLabel: "Tratamento Preventivo",
     metodologia: [
       "Avaliação de risco individual e da integridade da pele",
@@ -178,7 +183,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "Quando a ferida já está presente, o tratamento curativo busca a cicatrização no menor tempo possível, com segurança e conforto. Utilizamos curativos avançados, técnicas de preparo do leito da ferida e acompanhamento próximo de cada fase da cicatrização.",
     icone: "🌿",
-    cor: "0066CC",
+    cor: "0052CC",
     imagemLabel: "Tratamento Curativo",
     metodologia: [
       "Avaliação completa da ferida (TIME: tecido, infecção, umidade, bordas)",
@@ -198,7 +203,7 @@ export const SERVICOS: Servico[] = [
   },
 ];
 
-export const SERVICOS_HOME = SERVICOS.slice(0, 3); // Pés diabéticos, Úlcera venosa, Úlcera arterial
+export const SERVICOS_HOME = SERVICOS.slice(0, 3);
 
 export function getServico(slug: string): Servico | undefined {
   return SERVICOS.find((s) => s.slug === slug);
@@ -216,7 +221,7 @@ export function buildMetadata(opts: { title?: string; description?: string; path
   const description = opts.description || SITE.descricao;
   const path = opts.path || "/";
   const canonical = `${SITE.url}${path}`;
-  const ogImage = img(1200, 630, opts.imageLabel || SITE.nomeCurto, "0066CC");
+  const ogImage = img(1200, 630, opts.imageLabel || SITE.nome, "0052CC");
   return {
     title,
     description,

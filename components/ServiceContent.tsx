@@ -26,7 +26,7 @@ export default function ServiceContent({ servico }: { servico: Servico }) {
           </Reveal>
           <Reveal delay={0.15}>
             <div className="overflow-hidden rounded-3xl ring-4 ring-white/20 shadow-2xl">
-              <img src={img(640, 480, servico.imagemLabel, servico.cor)} alt={servico.titulo} width={640} height={480} className="h-full w-full object-cover" />
+              <img src={img(640, 480, servico.imagemLabel, servico.cor)} alt={servico.titulo} width={640} height={480} className="h-full w-full object-cover" loading="lazy" />
             </div>
           </Reveal>
         </div>

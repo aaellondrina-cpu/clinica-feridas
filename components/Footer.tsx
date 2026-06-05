@@ -1,14 +1,18 @@
 import Link from "next/link";
 import { SITE, SERVICOS, LEGISLACAO, whatsappHref } from "@/lib/metadata";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
     <footer className="mt-10 bg-neutro-escuro text-slate-300">
       <div className="container-base grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-white font-extrabold">L</span>
-            <span className="text-lg font-extrabold text-white">{SITE.nomeCurto}<span className="text-secondary">.</span></span>
+          <div className="flex items-center gap-2.5">
+            <Logo size={40} variant="white" />
+            <span className="leading-none">
+              <span className="block font-display text-lg font-bold text-white">CICATRIX</span>
+              <span className="block text-[10px] uppercase tracking-wider text-ouro">{SITE.subtitulo}</span>
+            </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-slate-400">{SITE.slogan}. Cuidado humanizado e baseado em evidências.</p>
         </div>
@@ -25,6 +29,7 @@ export default function Footer() {
         <div>
           <h4 className="mb-3 text-sm font-bold uppercase tracking-wide text-white">Institucional</h4>
           <ul className="space-y-2 text-sm">
+            <li><Link href="/galeria/" className="hover:text-white">Galeria de resultados</Link></li>
             <li><Link href="/sobre/" className="hover:text-white">Sobre a clínica</Link></li>
             <li><Link href="/contato/" className="hover:text-white">Contato</Link></li>
             <li><Link href="/privacidade/" className="hover:text-white">Política de Privacidade (LGPD)</Link></li>
@@ -42,15 +47,12 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Legislação / normas */}
       <div className="border-t border-white/10">
         <div className="container-base py-6">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Conformidade e normas</p>
           <div className="flex flex-wrap gap-2">
             {LEGISLACAO.map((n) => (
-              <span key={n.sigla} title={n.nome} className="rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-slate-400">
-                {n.sigla}
-              </span>
+              <span key={n.sigla} title={n.nome} className="rounded-md border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-slate-400">{n.sigla}</span>
             ))}
           </div>
         </div>
@@ -58,7 +60,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-base flex flex-col items-center justify-between gap-2 py-5 text-xs text-slate-500 sm:flex-row">
-          <p>© {new Date().getFullYear()} {SITE.nome}. Todos os direitos reservados.</p>
+          <p>© 2026 CICATRIX | Clínica de Tratamento de Feridas</p>
           <p>{SITE.responsavel}</p>
         </div>
       </div>

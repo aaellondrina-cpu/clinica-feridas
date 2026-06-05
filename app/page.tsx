@@ -9,8 +9,8 @@ export default function HomePage() {
     <>
       <HeroSection />
 
-      {/* SERVIÇOS — os 6 cards (visíveis por padrão, hover Framer, fundo alternado) */}
-      <section className="section" id="servicos">
+      {/* SERVIÇOS — os 6 cards (glass, visíveis por padrão, hover Framer, fundo alternado) */}
+      <section className="section bg-gradient-to-b from-primary-light/40 via-white to-secondary-light/40" id="servicos">
         <div className="container-base">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
@@ -20,7 +20,7 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
             {SERVICOS.map((s, i) => (
               <ServiceCardMotion key={s.slug} servico={s} index={i} />
             ))}

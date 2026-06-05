@@ -1,12 +1,15 @@
 import Link from "next/link";
-import { SITE, whatsappHref, img } from "@/lib/metadata";
+import { SITE, whatsappHref } from "@/lib/metadata";
 import Reveal from "./Reveal";
+import Logo from "./Logo";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-dark to-[#003366]">
-      <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-white/5" aria-hidden />
-      <div className="absolute -bottom-16 left-10 h-64 w-64 rounded-full bg-secondary/20" aria-hidden />
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary via-[#0a73a8] to-secondary">
+      {/* profundidade / parallax leve (decorativo, CSS) */}
+      <div className="pointer-events-none absolute -top-28 -right-24 h-96 w-96 rounded-full bg-white/10 blur-2xl" aria-hidden />
+      <div className="pointer-events-none absolute bottom-0 left-1/4 h-64 w-64 rounded-full bg-ouro/10 blur-2xl" aria-hidden />
+      <div className="pointer-events-none absolute -bottom-20 -left-10 h-72 w-72 rounded-full bg-secondary/30 blur-2xl" aria-hidden />
 
       <div className="container-base relative z-10 grid items-center gap-10 py-20 sm:py-28 lg:grid-cols-2">
         <Reveal>
@@ -14,37 +17,31 @@ export default function HeroSection() {
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white ring-1 ring-white/25">
               <span aria-hidden>🤍</span> Cuidado humanizado e baseado em evidências
             </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Tratamento especializado de <span className="text-destaque">feridas crônicas</span>
+            <h1 className="mt-5 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Especialista em <span className="text-ouro">feridas crônicas</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
-              Pés diabéticos, úlceras venosas e arteriais, deiscências cirúrgicas. Avaliação cuidadosa,
-              plano individualizado e acompanhamento até a cicatrização — com segurança e acolhimento.
+              CICATRIX — Clínica de Tratamento de Feridas. Pés diabéticos, úlceras venosas e arteriais,
+              deiscências cirúrgicas. Avaliação cuidadosa e acompanhamento até a cicatrização.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary" data-testid="hero-whatsapp">
-                💬 Falar no WhatsApp
-              </a>
-              <Link href="/contato/" className="btn bg-white text-primary hover:bg-neutro-claro">
-                Agendar avaliação
-              </Link>
+              <a href={whatsappHref()} target="_blank" rel="noopener" className="btn bg-ouro text-neutro-escuro hover:brightness-95" data-testid="hero-whatsapp">💬 Falar no WhatsApp</a>
+              <Link href="/contato/" className="btn bg-white text-primary hover:bg-neutro-claro">Agendar avaliação</Link>
             </div>
-            <p className="mt-4 text-sm text-white/70">{SITE.telefone} · {SITE.cidade}/{SITE.estado}</p>
+            <p className="mt-4 text-sm text-white/70">{SITE.telefone} · Adamantina e Osvaldo Cruz/SP</p>
           </div>
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl ring-4 ring-white/20 shadow-2xl">
-              {/* Placeholder on-brand — troque por foto real (mão segurando o pé, cuidado compassivo) */}
-              <img
-                src={img(720, 560, "Cuidado Compassivo", "00AA66")}
-                alt="Profissional de saúde cuidando do paciente"
-                width={720}
-                height={560}
-                className="h-full w-full object-cover"
-                loading="eager"
-              />
+          <div className="flex justify-center">
+            {/* Painel glass com a marca (logo 80px) */}
+            <div className="glass w-full max-w-sm rounded-3xl border-white/25 bg-white/10 p-10 text-center">
+              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-2xl bg-white/90 shadow-lg">
+                <Logo size={80} />
+              </div>
+              <p className="mt-5 font-display text-3xl font-bold text-white">CICATRIX</p>
+              <p className="mt-1 text-sm uppercase tracking-[0.2em] text-ouro">Tratamento de Feridas</p>
+              <p className="mt-4 text-sm text-white/80">{SITE.responsavel}</p>
             </div>
           </div>
         </Reveal>

@@ -14,19 +14,19 @@ const estagios = [
     fase: "Antes",
     titulo: "Avaliação inicial",
     desc: "Registro da ferida no momento da primeira avaliação, com classificação do tipo de lesão e definição do plano de cuidado.",
-    cor: "FF6B6B",
+    cor: "8B7355",
   },
   {
     fase: "Depois",
     titulo: "Em tratamento",
     desc: "Evolução ao longo do acompanhamento, com curativos avançados, controle de exsudato e preparo do leito da ferida.",
-    cor: "0066CC",
+    cor: "0052CC",
   },
   {
     fase: "Final",
     titulo: "Cicatrizado",
     desc: "Resultado ao final do protocolo: ferida cicatrizada, com orientação de prevenção para evitar recidivas.",
-    cor: "00AA66",
+    cor: "00A86B",
   },
 ];
 
@@ -65,6 +65,7 @@ export default function GaleriaPage() {
                       width={600}
                       height={450}
                       className="h-56 w-full object-cover"
+                      loading="lazy"
                     />
                     <span
                       className="absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-bold text-white shadow"
