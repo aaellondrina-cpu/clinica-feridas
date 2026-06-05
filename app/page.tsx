@@ -10,7 +10,7 @@ export default function HomePage() {
       <HeroSection />
 
       {/* BANDA DE CONFIANÇA — após o hero */}
-      <section className="border-y border-marrom/10 bg-[#FFF8DC]">
+      <section className="border-y border-primary/15 bg-neutro-claro">
         <div className="container-base grid grid-cols-1 gap-6 py-8 sm:grid-cols-3">
           {[
             { icone: "🤝", t: "Atendimento humanizado", d: "Cuidado próximo e individualizado" },

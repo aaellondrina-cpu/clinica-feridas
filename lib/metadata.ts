@@ -39,9 +39,9 @@ export function whatsappHref(mensagem?: string): string {
 
 // Imagem placeholder on-brand via SVG inline (data URI) — renderiza offline, NUNCA
 // quebra (não depende de serviço externo). Troque por fotos reais quando tiver.
-export function img(w: number, h: number, label: string, hex = "0052CC"): string {
+export function img(w: number, h: number, label: string, hex = "A0826D"): string {
   const fontSize = Math.max(16, Math.round(Math.min(w, h) / 9));
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#${hex}"/><stop offset="1" stop-color="#00A86B"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Georgia, serif" font-size="${fontSize}" font-weight="700" fill="#ffffff" fill-opacity="0.9" text-anchor="middle" dominant-baseline="central">${label}</text></svg>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#${hex}"/><stop offset="1" stop-color="#7CB342"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Georgia, serif" font-size="${fontSize}" font-weight="700" fill="#ffffff" fill-opacity="0.9" text-anchor="middle" dominant-baseline="central">${label}</text></svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }
 
@@ -90,7 +90,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "O pé diabético é uma das complicações mais frequentes da diabetes e exige acompanhamento especializado para prevenir infecções, úlceras e amputações. Avaliamos a sensibilidade, a circulação e a integridade da pele, com plano de cuidado individualizado e educação do paciente.",
     icone: "🦶",
-    cor: "0052CC",
+    cor: "A0826D",
     imagemLabel: "Pés Diabéticos",
     metodologia: [
       "Avaliação clínica e classificação de risco (escala de Wagner / Texas)",
@@ -109,7 +109,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "As úlceras venosas resultam da insuficiência venosa crônica e costumam aparecer na região dos tornozelos. Nosso protocolo combina terapia compressiva, curativos avançados e cuidado da pele perilesional para acelerar a cicatrização e reduzir o risco de recorrência.",
     icone: "🩹",
-    cor: "00A86B",
+    cor: "7CB342",
     imagemLabel: "Úlcera Venosa",
     metodologia: [
       "Avaliação da insuficiência venosa e do leito da ferida",
@@ -128,7 +128,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "As úlceras arteriais decorrem da redução do fluxo sanguíneo (isquemia) e exigem manejo cuidadoso, muitas vezes em conjunto com a equipe vascular. O foco é proteger o tecido, controlar a dor e a infecção e favorecer a perfusão, evitando agravamento da lesão.",
     icone: "❤️‍🩹",
-    cor: "8B7355",
+    cor: "A0826D",
     imagemLabel: "Úlcera Arterial",
     metodologia: [
       "Avaliação da perfusão (índice tornozelo-braço) e da dor",
@@ -147,7 +147,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "Feridas cirúrgicas que apresentam deiscência (abertura) ou cicatrização retardada precisam de acompanhamento especializado para prevenir infecção e favorecer o fechamento. Atuamos no manejo da ferida operatória complexa, com técnicas e curativos adequados a cada fase.",
     icone: "🩺",
-    cor: "0052CC",
+    cor: "A0826D",
     imagemLabel: "Feridas Cirúrgicas",
     metodologia: [
       "Avaliação da ferida operatória e dos sinais de deiscência",
@@ -166,7 +166,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "A prevenção é o cuidado mais eficaz e econômico. Avaliamos fatores de risco — diabetes, problemas circulatórios, mobilidade reduzida — e construímos um plano para proteger a pele, evitar lesões por pressão e identificar precocemente qualquer alteração.",
     icone: "🛡️",
-    cor: "00A86B",
+    cor: "7CB342",
     imagemLabel: "Tratamento Preventivo",
     metodologia: [
       "Avaliação de risco individual e da integridade da pele",
@@ -190,7 +190,7 @@ export const SERVICOS: Servico[] = [
     descricao:
       "Quando a ferida já está presente, o tratamento curativo busca a cicatrização no menor tempo possível, com segurança e conforto. Utilizamos curativos avançados, técnicas de preparo do leito da ferida e acompanhamento próximo de cada fase da cicatrização.",
     icone: "🌿",
-    cor: "0052CC",
+    cor: "A0826D",
     imagemLabel: "Tratamento Curativo",
     metodologia: [
       "Avaliação completa da ferida (TIME: tecido, infecção, umidade, bordas)",
@@ -228,7 +228,7 @@ export function buildMetadata(opts: { title?: string; description?: string; path
   const description = opts.description || SITE.descricao;
   const path = opts.path || "/";
   const canonical = `${SITE.url}${path}`;
-  const ogImage = img(1200, 630, opts.imageLabel || SITE.nome, "0052CC");
+  const ogImage = img(1200, 630, opts.imageLabel || SITE.nome, "A0826D");
   return {
     title,
     description,

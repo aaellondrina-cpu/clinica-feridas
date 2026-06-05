@@ -11,7 +11,7 @@ export default function Footer() {
             <Logo size={40} variant="white" />
             <span className="leading-none">
               <span className="block font-display text-lg font-bold text-white">CICATRIX</span>
-              <span className="block text-[10px] uppercase tracking-wider text-ouro">{SITE.subtitulo}</span>
+              <span className="block text-[10px] uppercase tracking-wider text-secondary">{SITE.subtitulo}</span>
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-slate-400">{SITE.slogan}. Cuidado humanizado e baseado em evidências.</p>

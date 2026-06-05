@@ -5,18 +5,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Paleta CICATRIX
-        primary: { DEFAULT: "#0052CC", dark: "#003E99", light: "#E3EDFB" }, // azul
-        secondary: { DEFAULT: "#00A86B", dark: "#00824F", light: "#E0F5EC" }, // verde
-        marrom: { DEFAULT: "#8B7355", dark: "#6F5B42", light: "#EFE9E2" }, // marrom premium
-        ouro: "#FFD700",
-        neutro: { claro: "#F5F7FA", escuro: "#2A2A2A" },
-        alerta: "#FF6B6B",
-        destaque: "#FFD700",
+        // Paleta CICATRIX — 3 cores: marrom premium + verde suave + neutros
+        primary: { DEFAULT: "#A0826D", dark: "#8A6F5C", light: "#EFE9E4" }, // marrom claro premium
+        secondary: { DEFAULT: "#7CB342", dark: "#689F38", light: "#EEF6E5" }, // verde suave
+        marrom: { DEFAULT: "#6F5B42", dark: "#5A4A36" }, // marrom escuro (faixas/accents)
+        neutro: { claro: "#F5F5F5", escuro: "#333333" },
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
-        display: ["Georgia", "Cambria", "Times New Roman", "serif"], // títulos premium
+        display: ["Georgia", "Cambria", "Times New Roman", "serif"],
       },
       keyframes: {
         "fade-up": {
