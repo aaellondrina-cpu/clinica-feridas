@@ -40,7 +40,10 @@ export function whatsappHref(mensagem?: string): string {
 // Imagem placeholder on-brand via SVG inline (data URI) — renderiza offline, NUNCA
 // quebra (não depende de serviço externo). Troque por fotos reais quando tiver.
 export function img(w: number, h: number, label: string, hex = "8A6242"): string {
-  const fontSize = Math.max(16, Math.round(Math.min(w, h) / 9));
+  // fonte ajusta pela altura E pelo comprimento do texto, pra não encostar nas bordas
+  const byHeight = Math.min(w, h) / 9;
+  const byWidth = (w * 0.82) / (label.length * 0.6);
+  const fontSize = Math.max(14, Math.round(Math.min(byHeight, byWidth)));
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#${hex}"/><stop offset="1" stop-color="#2D190E"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" font-family="Georgia, serif" font-size="${fontSize}" font-weight="700" fill="#ffffff" fill-opacity="0.9" text-anchor="middle" dominant-baseline="central">${label}</text></svg>`;
   return `data:image/svg+xml,${encodeURIComponent(svg)}`;
 }

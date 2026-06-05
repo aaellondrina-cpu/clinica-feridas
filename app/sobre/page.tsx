@@ -44,7 +44,7 @@ export default function SobrePage() {
           </Reveal>
           <Reveal delay={0.15}>
             <div className="overflow-hidden rounded-3xl shadow-xl ring-1 ring-slate-100">
-              <img src={img(640, 480, "Equipe de Enfermagem", "00AA66")} alt="Equipe da clínica" width={640} height={480} className="h-full w-full object-cover" />
+              <img src={img(640, 480, "Equipe de Enfermagem", "8A6242")} alt="Equipe da clínica" width={640} height={480} className="h-full w-full object-cover" />
             </div>
           </Reveal>
         </div>
