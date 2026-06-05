@@ -18,6 +18,14 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
+      {/* Faixa de credencial — visível em TODAS as páginas */}
+      <div className="bg-marrom text-white">
+        <div className="container-base flex h-8 items-center justify-center gap-2 text-[11px] sm:justify-end sm:text-xs">
+          <span className="font-medium">👩‍⚕️ Enfª {SITE.responsavelNome} · {SITE.coren}</span>
+          <span className="hidden opacity-60 sm:inline">·</span>
+          <a href={`tel:+55${SITE.whatsapp.slice(2)}`} className="hidden hover:underline sm:inline">{SITE.telefone}</a>
+        </div>
+      </div>
       <div className="container-base flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5" data-testid="logo" aria-label="CICATRIX — início">
           <Logo size={40} />
