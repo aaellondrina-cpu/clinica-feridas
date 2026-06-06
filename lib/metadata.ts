@@ -35,7 +35,7 @@ export const SITE = {
 // Agenda online (Calendly). Quando a Liliana criar a conta e mandar o link dela,
 // cole aqui (ex.: "https://calendly.com/liliana-cristina/consulta") e o calendário
 // "estilo hotel" aparece automaticamente em /agendar. Vazio = mostra o formulário.
-export const CALENDLY_URL: string = "https://calendly.com/lilianaferidas/30min";
+export const CALENDLY_URL: string = "https://calendly.com/lilianaferidas/consulta-avaliacao";
 
 export function whatsappHref(mensagem?: string): string {
   const texto = mensagem || "Olá! Gostaria de informações sobre o tratamento de feridas na CICATRIX.";
