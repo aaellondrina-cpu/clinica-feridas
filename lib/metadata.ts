@@ -11,7 +11,7 @@ export const SITE = {
   slogan: "Especialista em Feridas Crônicas",
   descricao:
     "CICATRIX — Clínica de Tratamento de Feridas em Adamantina e Osvaldo Cruz/SP. Especialista em feridas crônicas: pés diabéticos, úlceras venosas e arteriais, deiscências cirúrgicas e lesões por pressão. Cuidado humanizado e baseado em evidências. Responsável: Liliana Cristina Tino — COREN-SP 74372.",
-  url: "https://clinica-feridas.vercel.app",
+  url: "https://cicatrixferidas.com.br",
   whatsapp: "5518997585015",
   telefone: "(18) 99758-5015",
   email: "liliana-cristina@hotmail.com",
