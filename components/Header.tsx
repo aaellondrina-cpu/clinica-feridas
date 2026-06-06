@@ -9,6 +9,7 @@ const LINKS = [
   { href: "/", label: "Início" },
   { href: "/galeria/", label: "Galeria" },
   { href: "/sobre/", label: "Sobre" },
+  { href: "/agendar/", label: "Agendar" },
   { href: "/contato/", label: "Contato" },
 ];
 
@@ -53,7 +54,8 @@ export default function Header() {
           <Link href="/galeria/" className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700">Galeria</Link>
           <Link href="/sobre/" className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700">Sobre</Link>
           <Link href="/contato/" className="link-underline rounded-lg px-3 py-2 text-base font-medium text-slate-700">Contato</Link>
-          <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary ml-2 !min-h-[44px] !px-5 !text-sm">💬 WhatsApp</a>
+          <Link href="/agendar/" className="btn-outline ml-2 !min-h-[44px] !px-4 !text-sm">📅 Agendar</Link>
+          <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary !min-h-[44px] !px-4 !text-sm">💬 WhatsApp</a>
         </nav>
 
         {/* HAMBURGER MOBILE */}

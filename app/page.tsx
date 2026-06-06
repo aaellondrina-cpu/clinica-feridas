@@ -73,7 +73,7 @@ export default function HomePage() {
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/90">Fale com a nossa equipe e agende uma avaliação. Estamos aqui para ajudar na sua recuperação.</p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary">💬 Falar no WhatsApp</a>
-              <Link href="/contato/" className="btn border-2 border-white text-white hover:bg-white/10">Agendar avaliação</Link>
+              <Link href="/agendar/" className="btn border-2 border-white text-white hover:bg-white/10">📅 Agendar consulta</Link>
             </div>
           </div>
         </div>

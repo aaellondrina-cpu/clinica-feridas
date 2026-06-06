@@ -39,7 +39,7 @@ export default function SobrePage() {
                 Tratamos feridas que exigem atenção contínua — pés diabéticos, úlceras venosas e arteriais, feridas cirúrgicas e lesões por pressão —
                 unindo técnica, tecnologia em curativos e, acima de tudo, um cuidado que enxerga a pessoa por inteiro.
               </p>
-              <Link href="/contato/" className="btn-primary mt-6">Agendar avaliação</Link>
+              <Link href="/agendar/" className="btn-primary mt-6">📅 Agendar consulta</Link>
             </div>
           </Reveal>
           <Reveal delay={0.15}>

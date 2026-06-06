@@ -25,7 +25,7 @@ export default function HeroSection() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={whatsappHref()} target="_blank" rel="noopener" className="btn-secondary" data-testid="hero-whatsapp">💬 Falar no WhatsApp</a>
-              <Link href="/contato/" className="btn bg-white text-primary hover:bg-neutro-claro">Agendar avaliação</Link>
+              <Link href="/agendar/" className="btn bg-white text-primary hover:bg-neutro-claro">📅 Agendar consulta</Link>
             </div>
             <p className="mt-4 text-sm text-white/70">{SITE.telefone} · Adamantina e Osvaldo Cruz/SP</p>
           </div>
