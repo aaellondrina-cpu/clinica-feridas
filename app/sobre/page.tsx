@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE, LEGISLACAO, buildMetadata, whatsappHref, img } from "@/lib/metadata";
+import { SITE, LEGISLACAO, buildMetadata, whatsappHref } from "@/lib/metadata";
 import Reveal from "@/components/Reveal";
 
 export const metadata = buildMetadata({
@@ -43,8 +43,8 @@ export default function SobrePage() {
             </div>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="overflow-hidden rounded-3xl shadow-xl ring-1 ring-slate-100">
-              <img src={img(640, 480, "Equipe de Enfermagem", "8A6242")} alt="Equipe da clínica" width={640} height={480} className="h-full w-full object-cover" />
+            <div className="mx-auto aspect-[4/5] w-full max-w-[360px] overflow-hidden rounded-3xl shadow-xl ring-1 ring-primary/10">
+              <img src="/liliana.jpg" alt="Enfª Liliana Cristina Tino — COREN-SP 74372" className="h-full w-full object-cover object-top" loading="lazy" />
             </div>
           </Reveal>
         </div>

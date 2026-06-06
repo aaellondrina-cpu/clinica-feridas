@@ -65,6 +65,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* CONHEÇA A ESPECIALISTA */}
+      <section className="section bg-neutro-claro">
+        <div className="container-base">
+          <div className="mx-auto grid max-w-4xl items-center gap-8 sm:grid-cols-[260px_1fr]">
+            <Reveal>
+              <div className="mx-auto aspect-[4/5] w-full max-w-[260px] overflow-hidden rounded-3xl shadow-lg ring-1 ring-primary/15">
+                <img src="/liliana.jpg" alt="Enfª Liliana Cristina Tino" className="h-full w-full object-cover object-top" />
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div>
+                <span className="text-sm font-bold uppercase tracking-wide text-primary">Quem vai cuidar de você</span>
+                <h2 className="h-section mt-2">Enfª Liliana Cristina Tino</h2>
+                <p className="mt-1 font-semibold text-secondary">COREN-SP 74372 · Especialista em tratamento de feridas</p>
+                <p className="mt-4 text-lg leading-relaxed text-slate-600">
+                  Atendimento humanizado e baseado em evidências, com acompanhamento próximo de cada fase da cicatrização — nas unidades de Adamantina e Osvaldo Cruz/SP.
+                </p>
+                <Link href="/agendar/" className="btn-primary mt-6">📅 Agendar com a Liliana</Link>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
       {/* CTA FINAL */}
       <section className="section">
         <div className="container-base">
