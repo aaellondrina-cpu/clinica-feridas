@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.cicatrixferidas.com.br" }],
+      "destination": "https://cicatrixferidas.com.br/:path*",
+      "statusCode": 301
+    }
+  ]
+}
